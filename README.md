@@ -6,6 +6,13 @@ Prototype académique qui combine IoT, supervision et Computer Vision embarquée
 
 ![Vue d'ensemble du prototype : ESP32, capteurs, relais, ventilateur, pompe et Raspberry Pi](docs/demo/prototype_vue_ensemble.jpg)
 
+## En bref
+
+- **Projet individuel** — mémoire de Master IA & Smart Technologies, 2024–2025
+- **Architecture** — ESP32 · MQTT · Node-RED · Raspberry Pi
+- **Computer Vision** — YOLOv9t, mAP50 **0,865 sur validation**
+- **Edge inference** — environ **1 s/image** observé sur le Raspberry Pi du prototype
+
 ---
 
 ## 1. Présentation
@@ -155,17 +162,17 @@ J'ai développé deux détecteurs **YOLOv9t** (environ 2 millions de paramètres
 
 > Ces métriques ont été calculées sur le **jeu de validation** utilisé pendant la sélection du modèle. Elles ne constituent pas encore une évaluation finale sur le jeu de test indépendant, qui existe (153 images) mais n'a pas encore servi.
 
-Les images viennent de jeux publics (Roboflow, Kaggle) et du web, puis ont été nettoyées et réannotées. **Ni ces images ni les poids du modèle ne sont redistribués ici** (voir [`models/README.md`](models/README.md)).
+Les images provenaient de plusieurs sources externes, notamment Roboflow, Kaggle et le web, puis ont été nettoyées et réannotées. Ni ces images ni les poids du modèle ne sont redistribués dans ce dépôt (voir [`models/README.md`](models/README.md)).
 
 ---
 
 ## 9. L'impact de la qualité des données
 
-Une douzaine d'entraînements sur les annotations d'origine (YOLOv8n, YOLOv9t et YOLOv10n, 640 et 1024 px, plusieurs optimiseurs) plafonnaient à une mAP50 de validation comprise entre **0,68 et 0,81**, la plupart entre 0,75 et 0,81.
+Une quinzaine d'entraînements sur les annotations d'origine (YOLOv8n, YOLOv9t et YOLOv10n, 640 et 1024 px, plusieurs optimiseurs) ont produit des mAP50 de validation comprises entre 0,68 et 0,82, la plupart entre 0,75 et 0,81.
 
 J'ai alors repris les annotations avec LabelImg. Sur les **mêmes 170 images de validation**, le nombre d'instances annotées est passé de **356 à 583**, soit environ **+64 %**. Le modèle réentraîné atteint une mAP50 de **0,865**.
 
-**L'amélioration de la qualité des annotations a eu plus d'effet que la répétition des entraînements.**
+Cette phase m'a surtout montré l'importance de la qualité et de la cohérence des annotations dans l'évaluation d'un modèle.
 
 Une précision s'impose : les annotations de validation ont elles aussi changé. Les deux séries de chiffres ne sont donc pas strictement comparables, et le gain reflète à la fois un meilleur apprentissage et une évaluation plus cohérente.
 
@@ -274,7 +281,7 @@ hydroponic-aiot/
 
 ## 16. Ce que ce projet m'a appris
 
-- **La qualité des données compte plus que le réglage répété du modèle.**
+- **La qualité des données et des annotations peut être aussi déterminante que le réglage du modèle.**
 - **Intégrer les briques est un problème à part entière** : chacune fonctionnait seule, leur assemblage a posé le plus de difficultés.
 - **L'edge computing a ses propres contraintes** : quelques millisecondes sur Colab, environ une seconde sur le Pi, et des images de caméra très différentes des jeux de données.
 - **La gestion des secrets se prévoit dès le début**, pas au moment de publier.
