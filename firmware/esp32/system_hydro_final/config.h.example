@@ -1,0 +1,7 @@
+// Copier ce fichier en "config.h" (même dossier) puis renseigner les valeurs.
+// config.h est ignoré par Git : ne jamais le versionner.
+#pragma once
+
+#define WIFI_SSID      "VOTRE_SSID"
+#define WIFI_PASSWORD  "VOTRE_MOT_DE_PASSE_WIFI"
+#define MQTT_SERVER    "ADRESSE_DU_BROKER_MQTT"   // ex. nom d'hôte ou IP du Raspberry Pi

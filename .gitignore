@@ -1,0 +1,74 @@
+# --- Secrets et configuration locale ---
+.env
+.env.*
+!.env.example
+config.h
+!config.h.example
+secrets.*
+*.secret
+*.key
+*.pem
+*.p12
+*.pfx
+*.keystore
+*.jks
+id_rsa*
+credentials*
+*.credentials
+
+# --- Node-RED : identifiants et configuration locale ---
+flows_cred.json
+*_cred.json
+.flows*.json.backup
+.config.*.json
+settings.js
+.node-red/
+node_modules/
+
+# --- Historique shell / systèmes ---
+.bash_history
+.zsh_history
+.python_history
+*.service.local
+
+# --- Bases de données et états ---
+*.db
+*.sqlite
+*.sqlite3
+grafana.db
+influxd.bolt
+*.tfstate
+*.tfstate.*
+.terraform/
+
+# --- Python / environnements ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+myenv/
+.ipynb_checkpoints/
+
+# --- Données et poids lourds (publier par lien, pas dans le dépôt) ---
+datasets/
+data/raw/
+runs/
+*.pt
+*.tflite
+*.onnx
+*.h5
+*.pth
+*.zip
+*.rar
+
+# --- Images de test de la caméra ---
+test.jpg
+
+# --- Systèmes d'exploitation / éditeurs ---
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+~$*
+*.tmp

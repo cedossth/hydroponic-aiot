@@ -1,0 +1,20 @@
+{
+  "name": "node-red-project",
+  "description": "initially created for you by Node-RED 4.0.5",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "@flowfuse/node-red-dashboard": "~1.19.1",
+    "@studiobox/node-red-contrib-ui-widget-humidity-tree": "~0.6.3",
+    "@studiobox/node-red-contrib-ui-widget-thermometer": "~0.7.7",
+    "node-red-contrib-camerapi": "~0.0.39",
+    "node-red-contrib-component-dashboard": "~0.0.4",
+    "node-red-contrib-dashboard-bar-chart-data": "~0.9.93",
+    "node-red-contrib-influxdb": "~0.7.0",
+    "node-red-contrib-pythonshell": "~1.5.4",
+    "node-red-contrib-ui-thermostat": "~1.0.0",
+    "node-red-contrib-ui-timelines-chart": "~0.1.9",
+    "node-red-contrib-ui-value-trail": "~0.2.3",
+    "node-red-dashboard": "~3.6.5"
+  }
+}

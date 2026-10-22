@@ -1,0 +1,3132 @@
+[
+    {
+        "id": "23497a94c885d771",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2a2bc2518870a3bd",
+        "type": "tab",
+        "label": "Flux 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "197e391cbbea50c9",
+        "type": "tab",
+        "label": "Flux 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "6be7ece3022d6815",
+        "type": "tab",
+        "label": "Flux 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3e64a93143a5efb4",
+        "type": "mqtt-broker",
+        "name": "MQTT Brocker",
+        "broker": "${MQTT_BROKER_HOST}",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "autoUnsubscribe": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthRetain": "false",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closeRetain": "false",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willRetain": "false",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "31957f22075738d3",
+        "type": "influxdb",
+        "hostname": "${INFLUXDB_HOST}",
+        "port": "8086",
+        "protocol": "http",
+        "database": "database",
+        "name": "",
+        "usetls": false,
+        "tls": "",
+        "influxdbVersion": "2.0",
+        "url": "${INFLUXDB_URL}",
+        "timeout": "10",
+        "rejectUnauthorized": false
+    },
+    {
+        "id": "da731be129d331bf",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "291cd406bb2184d5",
+        "type": "ui_tab",
+        "name": "Hydrosystem HOME",
+        "icon": "home",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7190592b03f5d38a",
+        "type": "ui_group",
+        "name": "Données capteurs",
+        "tab": "291cd406bb2184d5",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f41659c0e58354f9",
+        "type": "ui_group",
+        "name": "Etat actionneur",
+        "tab": "291cd406bb2184d5",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e5cbd708ba63c81f",
+        "type": "ui_tab",
+        "name": "Control",
+        "icon": "pan_tool",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "327ea395dddff33e",
+        "type": "ui_group",
+        "name": "Pompe",
+        "tab": "e5cbd708ba63c81f",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "edf3195c4909c1fd",
+        "type": "ui_group",
+        "name": "DHT Diagrammes",
+        "tab": "291cd406bb2184d5",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e6e6a6c4dd9b9428",
+        "type": "ui_group",
+        "name": "Luminosite Diagramme",
+        "tab": "291cd406bb2184d5",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "d00a3bff831bac7f",
+        "type": "ui_group",
+        "name": "TDS/pH Diagrammes",
+        "tab": "291cd406bb2184d5",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6e486e6a6c4260fd",
+        "type": "ui_group",
+        "name": "Capture pH",
+        "tab": "e5cbd708ba63c81f",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "dd6d366f17df5523",
+        "type": "ui_group",
+        "name": "Capture TDS",
+        "tab": "e5cbd708ba63c81f",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ef6125c7a764a82a",
+        "type": "ui_group",
+        "name": "Capture Temperature",
+        "tab": "e5cbd708ba63c81f",
+        "order": 4,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b2afc89d1ffbd198",
+        "type": "ui_group",
+        "name": "Capture Humidite ambiante",
+        "tab": "e5cbd708ba63c81f",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4a80aa3e213bbd61",
+        "type": "ui_group",
+        "name": "Capture Luminosite",
+        "tab": "e5cbd708ba63c81f",
+        "order": 6,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "08106da884fc875a",
+        "type": "ui_tab",
+        "name": "Configurations",
+        "icon": "settings_applications",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c5ab41c4da9df60d",
+        "type": "ui_group",
+        "name": "Seuils température",
+        "tab": "08106da884fc875a",
+        "order": 1,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "8630dd6e35be1d38",
+        "type": "ui_group",
+        "name": "Seuils humidite",
+        "tab": "08106da884fc875a",
+        "order": 2,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c0bd9a86d72846a7",
+        "type": "ui_group",
+        "name": "Seuils pH",
+        "tab": "08106da884fc875a",
+        "order": 3,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "ed9a1db91a50bf87",
+        "type": "ui_group",
+        "name": "Seuils TDS",
+        "tab": "08106da884fc875a",
+        "order": 4,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5a083607fa984f2f",
+        "type": "ui_group",
+        "name": "Seuils luminosite",
+        "tab": "08106da884fc875a",
+        "order": 5,
+        "disp": true,
+        "width": 8,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "5c026aeeb632c8ae",
+        "type": "ui-base",
+        "name": "My Dashboard",
+        "path": "/dashboard",
+        "appIcon": "",
+        "includeClientData": true,
+        "acceptsClientConfig": [
+            "ui-notification",
+            "ui-control"
+        ],
+        "showPathInSidebar": false,
+        "showPageTitle": true,
+        "navigationStyle": "default",
+        "titleBarStyle": "default"
+    },
+    {
+        "id": "06854e03d1873ba6",
+        "type": "ui-theme",
+        "name": "Default Theme",
+        "colors": {
+            "surface": "#ffffff",
+            "primary": "#0094CE",
+            "bgPage": "#eeeeee",
+            "groupBg": "#ffffff",
+            "groupOutline": "#cccccc"
+        },
+        "sizes": {
+            "density": "default",
+            "pagePadding": "12px",
+            "groupGap": "12px",
+            "groupBorderRadius": "4px",
+            "widgetGap": "12px"
+        }
+    },
+    {
+        "id": "22e28bd8acf51522",
+        "type": "ui-page",
+        "name": "Page 1",
+        "ui": "5c026aeeb632c8ae",
+        "path": "/page1",
+        "icon": "home",
+        "layout": "grid",
+        "theme": "06854e03d1873ba6",
+        "breakpoints": [
+            {
+                "name": "Default",
+                "px": 0,
+                "cols": 3
+            },
+            {
+                "name": "Tablet",
+                "px": 576,
+                "cols": 6
+            },
+            {
+                "name": "Small Desktop",
+                "px": 768,
+                "cols": 9
+            },
+            {
+                "name": "Desktop",
+                "px": 1024,
+                "cols": 12
+            }
+        ],
+        "order": 1,
+        "className": "",
+        "visible": "true",
+        "disabled": "false"
+    },
+    {
+        "id": "f95fb08be7206cef",
+        "type": "mqtt in",
+        "z": "23497a94c885d771",
+        "name": "",
+        "topic": "hydroponics/sensors/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 160,
+        "wires": [
+            [
+                "abd261610d9b2ff8",
+                "4240af1fac8a786a",
+                "7db3af2ba81efa1e"
+            ]
+        ]
+    },
+    {
+        "id": "abd261610d9b2ff8",
+        "type": "influxdb out",
+        "z": "23497a94c885d771",
+        "influxdb": "31957f22075738d3",
+        "name": "Temprature",
+        "measurement": "hydroponics/sensors/temperature",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "hydrosystem",
+        "bucket": "my_bucket",
+        "x": 770,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "7f0e5def14b7e6c5",
+        "type": "mqtt in",
+        "z": "23497a94c885d771",
+        "name": "",
+        "topic": "hydroponics/sensors/humidity",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 340,
+        "wires": [
+            [
+                "c6474c73b421ec29",
+                "2547611abe90585b",
+                "180edf3b0aa1a09e"
+            ]
+        ]
+    },
+    {
+        "id": "c6474c73b421ec29",
+        "type": "influxdb out",
+        "z": "23497a94c885d771",
+        "influxdb": "31957f22075738d3",
+        "name": "Humidite",
+        "measurement": "hydroponics/sensors/humidity",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "hydrosystem",
+        "bucket": "my_bucket",
+        "x": 760,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "03f2f437230c282a",
+        "type": "mqtt in",
+        "z": "23497a94c885d771",
+        "name": "",
+        "topic": "hydroponics/sensors/light",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 480,
+        "wires": [
+            [
+                "7b7ef9d2abc2c706",
+                "7ea9109541e8d19a",
+                "d4c95bf1bf43a827"
+            ]
+        ]
+    },
+    {
+        "id": "7b7ef9d2abc2c706",
+        "type": "influxdb out",
+        "z": "23497a94c885d771",
+        "influxdb": "31957f22075738d3",
+        "name": "Luminosite",
+        "measurement": "hydroponics/sensors/light",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "hydrosystem",
+        "bucket": "my_bucket",
+        "x": 750,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "361ef46adef12b50",
+        "type": "mqtt in",
+        "z": "23497a94c885d771",
+        "name": "",
+        "topic": "hydroponics/sensors/ph",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 640,
+        "wires": [
+            [
+                "de77aa5ac3a2bedd",
+                "ac4e4fd8545b7b2b",
+                "53b40a20595630b7"
+            ]
+        ]
+    },
+    {
+        "id": "de77aa5ac3a2bedd",
+        "type": "influxdb out",
+        "z": "23497a94c885d771",
+        "influxdb": "31957f22075738d3",
+        "name": "ph",
+        "measurement": "hydroponics/sensors/ph",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "hydrosystem",
+        "bucket": "my_bucket",
+        "x": 770,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "07a8f9d5fb0a28e7",
+        "type": "mqtt in",
+        "z": "23497a94c885d771",
+        "name": "",
+        "topic": "hydroponics/sensors/tds",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 230,
+        "y": 820,
+        "wires": [
+            [
+                "aa4de0aa4a342cf3",
+                "2f7fdfc04d79ee04",
+                "f933204f8bb14ebb"
+            ]
+        ]
+    },
+    {
+        "id": "aa4de0aa4a342cf3",
+        "type": "influxdb out",
+        "z": "23497a94c885d771",
+        "influxdb": "31957f22075738d3",
+        "name": "TDS",
+        "measurement": "hydroponics/sensors/tds",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "hydrosystem",
+        "bucket": "my_bucket",
+        "x": 770,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "8f46f2623d1b31fd",
+        "type": "mqtt in",
+        "z": "23497a94c885d771",
+        "name": "",
+        "topic": "hydroponics/sensors/water_level",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 250,
+        "y": 1020,
+        "wires": [
+            [
+                "2fe86a76dcc8d113",
+                "c2dad1178cbf0d3f"
+            ]
+        ]
+    },
+    {
+        "id": "2fe86a76dcc8d113",
+        "type": "influxdb out",
+        "z": "23497a94c885d771",
+        "influxdb": "31957f22075738d3",
+        "name": "water_level",
+        "measurement": "hydroponics/sensors/water_level",
+        "precision": "",
+        "retentionPolicy": "",
+        "database": "database",
+        "precisionV18FluxV20": "ms",
+        "retentionPolicyV18Flux": "",
+        "org": "hydrosystem",
+        "bucket": "my_bucket",
+        "x": 750,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "4240af1fac8a786a",
+        "type": "ui_text",
+        "z": "23497a94c885d771",
+        "group": "7190592b03f5d38a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Temperature :",
+        "format": "{{msg.payload + \" °C\"}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 600,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "2547611abe90585b",
+        "type": "ui_text",
+        "z": "23497a94c885d771",
+        "group": "7190592b03f5d38a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Humidite :",
+        "format": "{{msg.payload + \" %\"}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 620,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "7ea9109541e8d19a",
+        "type": "ui_text",
+        "z": "23497a94c885d771",
+        "group": "7190592b03f5d38a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Luminosite :",
+        "format": "{{msg.payload + \" Lux\"}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 570,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "ac4e4fd8545b7b2b",
+        "type": "ui_text",
+        "z": "23497a94c885d771",
+        "group": "7190592b03f5d38a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "pH :",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 550,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "2f7fdfc04d79ee04",
+        "type": "ui_text",
+        "z": "23497a94c885d771",
+        "group": "7190592b03f5d38a",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "TDS :",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 550,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "de88063d9c47e201",
+        "type": "ui_text",
+        "z": "23497a94c885d771",
+        "group": "7190592b03f5d38a",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Niveau d'eau :",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 860,
+        "y": 1120,
+        "wires": []
+    },
+    {
+        "id": "c2dad1178cbf0d3f",
+        "type": "function",
+        "z": "23497a94c885d771",
+        "name": "filtre données niveau d'eau ",
+        "func": "if (msg.payload == 1)\n{\n    msg.payload = \"Niveau critique\";\n}else{\n    msg.payload = \"Niveau satisfaisant\";\n}\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 1120,
+        "wires": [
+            [
+                "de88063d9c47e201"
+            ]
+        ]
+    },
+    {
+        "id": "effce358ae371a6f",
+        "type": "mqtt in",
+        "z": "23497a94c885d771",
+        "name": "",
+        "topic": "hydroponics/status/fan",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 260,
+        "y": 1260,
+        "wires": [
+            [
+                "ea4786b2bb27b3a7"
+            ]
+        ]
+    },
+    {
+        "id": "464b4aa3965c8cb3",
+        "type": "mqtt in",
+        "z": "23497a94c885d771",
+        "name": "",
+        "topic": "hydroponics/status/pump",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 270,
+        "y": 1400,
+        "wires": [
+            [
+                "56be152621908b20"
+            ]
+        ]
+    },
+    {
+        "id": "180edf3b0aa1a09e",
+        "type": "ui_chart",
+        "z": "23497a94c885d771",
+        "name": "",
+        "group": "edf3195c4909c1fd",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Humidite chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 580,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7db3af2ba81efa1e",
+        "type": "ui_chart",
+        "z": "23497a94c885d771",
+        "name": "",
+        "group": "edf3195c4909c1fd",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Temperature chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 530,
+        "y": 80,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4c95bf1bf43a827",
+        "type": "ui_chart",
+        "z": "23497a94c885d771",
+        "name": "",
+        "group": "e6e6a6c4dd9b9428",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "Luminosite chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "0",
+        "ymax": "1500",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 480,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "53b40a20595630b7",
+        "type": "ui_chart",
+        "z": "23497a94c885d771",
+        "name": "",
+        "group": "d00a3bff831bac7f",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "pH chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 440,
+        "y": 600,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f933204f8bb14ebb",
+        "type": "ui_chart",
+        "z": "23497a94c885d771",
+        "name": "",
+        "group": "d00a3bff831bac7f",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "label": "TDS chart",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": true,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": "5",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 445.5555114746094,
+        "y": 772.22216796875,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6c0fed1cf947ae43",
+        "type": "ui_template",
+        "z": "23497a94c885d771",
+        "group": "f41659c0e58354f9",
+        "name": "",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "format": "\n    <div class=\"status alarm\">\n<table  class=\"table_status\">\n  <tr><td><strong>Fan Status: </strong></td>\n  <td><i class=\"material-icons\">{{msg.alarm}}</i>\n</td>\n</tr>\n  </table>\n\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 660,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ea4786b2bb27b3a7",
+        "type": "function",
+        "z": "23497a94c885d771",
+        "name": "",
+        "func": "var payload=msg.payload;\nif (payload == \"false\")\nmsg.alarm=\"mi-mode_fan_off\";\nelse\nmsg.alarm=\"mi-wind_power\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 1260,
+        "wires": [
+            [
+                "6c0fed1cf947ae43"
+            ]
+        ]
+    },
+    {
+        "id": "cde63890f8c75abb",
+        "type": "ui_template",
+        "z": "23497a94c885d771",
+        "group": "f41659c0e58354f9",
+        "name": "",
+        "order": 3,
+        "width": "0",
+        "height": "0",
+        "format": "\n    <div class=\"status alarm\">\n<table  class=\"table_status\">\n  <tr><td><strong>Pump Status: </strong></td>\n  <td><i class=\"material-icons\">{{msg.alarm}}</i>\n</td>\n</tr>\n  </table>\n\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 720,
+        "y": 1400,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "56be152621908b20",
+        "type": "function",
+        "z": "23497a94c885d771",
+        "name": "",
+        "func": "var payload=msg.payload;\nif (payload == \"false\")\nmsg.alarm=\"mi-mode_fan_off\";\nelse\nmsg.alarm=\"mi-wind_power\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 1400,
+        "wires": [
+            [
+                "cde63890f8c75abb"
+            ]
+        ]
+    },
+    {
+        "id": "f16886df45806edb",
+        "type": "ui_switch",
+        "z": "2a2bc2518870a3bd",
+        "name": "switch pompe",
+        "label": "Pompe",
+        "tooltip": "",
+        "group": "327ea395dddff33e",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 780,
+        "y": 140,
+        "wires": [
+            [
+                "978857805460fa13"
+            ]
+        ]
+    },
+    {
+        "id": "978857805460fa13",
+        "type": "mqtt out",
+        "z": "2a2bc2518870a3bd",
+        "name": "Pompe",
+        "topic": "hydroponics/control/manualPump",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e64a93143a5efb4",
+        "x": 1040,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "15bc94ecbb5fa64b",
+        "type": "mqtt in",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "topic": "hydroponics/status/pump",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "191054039d21b397",
+                "5ec3cdb1a41f5245"
+            ]
+        ]
+    },
+    {
+        "id": "191054039d21b397",
+        "type": "function",
+        "z": "2a2bc2518870a3bd",
+        "name": "filtre pompe",
+        "func": "if (msg.payload == \"true\")\n{\n    msg.payload = \"on\";\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 140,
+        "wires": [
+            [
+                "f16886df45806edb"
+            ]
+        ]
+    },
+    {
+        "id": "c1ba414f5c8f34e7",
+        "type": "ui_switch",
+        "z": "2a2bc2518870a3bd",
+        "name": "switch pH",
+        "label": "Capture pH",
+        "tooltip": "",
+        "group": "6e486e6a6c4260fd",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 760,
+        "y": 300,
+        "wires": [
+            [
+                "c0d790846e0ba181"
+            ]
+        ]
+    },
+    {
+        "id": "c0d790846e0ba181",
+        "type": "mqtt out",
+        "z": "2a2bc2518870a3bd",
+        "name": "pH",
+        "topic": "hydroponics/control/manualCapture/ph",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e64a93143a5efb4",
+        "x": 1030,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "9ef9aa0b759d1131",
+        "type": "mqtt in",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "topic": "hydroponics/status/ph",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 300,
+        "wires": [
+            [
+                "4b520bbb0aa38d2c"
+            ]
+        ]
+    },
+    {
+        "id": "4b520bbb0aa38d2c",
+        "type": "function",
+        "z": "2a2bc2518870a3bd",
+        "name": "filtre pH",
+        "func": "if (msg.payload == \"true\")\n{\n    msg.payload = \"on\";\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 300,
+        "wires": [
+            [
+                "c1ba414f5c8f34e7"
+            ]
+        ]
+    },
+    {
+        "id": "050099079e61f8ed",
+        "type": "ui_switch",
+        "z": "2a2bc2518870a3bd",
+        "name": "switch tds",
+        "label": "TDS",
+        "tooltip": "",
+        "group": "dd6d366f17df5523",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "decouple": "false",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 760,
+        "y": 540,
+        "wires": [
+            [
+                "98ca05815d1622ae"
+            ]
+        ]
+    },
+    {
+        "id": "98ca05815d1622ae",
+        "type": "mqtt out",
+        "z": "2a2bc2518870a3bd",
+        "name": "TDS",
+        "topic": "hydroponics/control/manualCapture/tds",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e64a93143a5efb4",
+        "x": 1070,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "21e61ada734522af",
+        "type": "mqtt in",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "topic": "hydroponics/status/tds",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 540,
+        "wires": [
+            [
+                "073fca7b3dbf784a"
+            ]
+        ]
+    },
+    {
+        "id": "073fca7b3dbf784a",
+        "type": "function",
+        "z": "2a2bc2518870a3bd",
+        "name": "filtre tds",
+        "func": "if (msg.payload == \"true\")\n{\n    msg.payload = \"on\";\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 540,
+        "wires": [
+            [
+                "050099079e61f8ed"
+            ]
+        ]
+    },
+    {
+        "id": "6b29275b6b601795",
+        "type": "mqtt out",
+        "z": "2a2bc2518870a3bd",
+        "name": "Temperature",
+        "topic": "hydroponics/control/manualCapture/temp",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e64a93143a5efb4",
+        "x": 1190,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "d60a8f86dc820d4a",
+        "type": "mqtt in",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "topic": "hydroponics/status/temp",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 820,
+        "wires": [
+            [
+                "04f3c20c09d82c9d",
+                "226ad36b7a5790f9"
+            ]
+        ]
+    },
+    {
+        "id": "04f3c20c09d82c9d",
+        "type": "function",
+        "z": "2a2bc2518870a3bd",
+        "name": "filtre temp",
+        "func": "if (msg.payload == \"true\")\n{\n    msg.payload = false;\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 820,
+        "wires": [
+            [
+                "68089b12bfa64a02"
+            ]
+        ]
+    },
+    {
+        "id": "5c458ad6aa296c62",
+        "type": "ui_button",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "group": "ef6125c7a764a82a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Capture_temperature",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "mi-thermostat",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 940,
+        "y": 820,
+        "wires": [
+            [
+                "6b29275b6b601795"
+            ]
+        ]
+    },
+    {
+        "id": "68089b12bfa64a02",
+        "type": "change",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 820,
+        "wires": [
+            [
+                "5c458ad6aa296c62"
+            ]
+        ]
+    },
+    {
+        "id": "d85f3671cbcc879d",
+        "type": "mqtt out",
+        "z": "2a2bc2518870a3bd",
+        "name": "Humidite",
+        "topic": "hydroponics/control/manualCapture/humidity",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e64a93143a5efb4",
+        "x": 1160,
+        "y": 1000,
+        "wires": []
+    },
+    {
+        "id": "5791cca0111a4410",
+        "type": "mqtt in",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "topic": "hydroponics/status/hum",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 1000,
+        "wires": [
+            [
+                "c3f5a82f50de39cd",
+                "ae608a47d09ea847"
+            ]
+        ]
+    },
+    {
+        "id": "c3f5a82f50de39cd",
+        "type": "function",
+        "z": "2a2bc2518870a3bd",
+        "name": "filtre hum",
+        "func": "if (msg.payload == \"true\")\n{\n    msg.payload = false;\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 1000,
+        "wires": [
+            [
+                "59f2320704a34cf7"
+            ]
+        ]
+    },
+    {
+        "id": "d4b536b7ef20142d",
+        "type": "ui_button",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "group": "b2afc89d1ffbd198",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Capture_humidite",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "mi-water_drop",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 950,
+        "y": 1000,
+        "wires": [
+            [
+                "d85f3671cbcc879d"
+            ]
+        ]
+    },
+    {
+        "id": "59f2320704a34cf7",
+        "type": "change",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 1000,
+        "wires": [
+            [
+                "d4b536b7ef20142d"
+            ]
+        ]
+    },
+    {
+        "id": "170e583d2a7817f2",
+        "type": "mqtt out",
+        "z": "2a2bc2518870a3bd",
+        "name": "Luminosite",
+        "topic": "hydroponics/control/manualCapture/light",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e64a93143a5efb4",
+        "x": 1170,
+        "y": 1200,
+        "wires": []
+    },
+    {
+        "id": "50754e1eb22b75b9",
+        "type": "mqtt in",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "topic": "hydroponics/status/light",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 1200,
+        "wires": [
+            [
+                "d8b4f3ba9094e40e",
+                "173e8d6af6f08094"
+            ]
+        ]
+    },
+    {
+        "id": "d8b4f3ba9094e40e",
+        "type": "function",
+        "z": "2a2bc2518870a3bd",
+        "name": "filtre light",
+        "func": "if (msg.payload == \"true\")\n{\n    msg.payload = false;\n    return msg;\n}\n",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 1200,
+        "wires": [
+            [
+                "5691c40d5c6e501c"
+            ]
+        ]
+    },
+    {
+        "id": "421f78a3e4b92c74",
+        "type": "ui_button",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "group": "4a80aa3e213bbd61",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Capture_luminosite",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "wb_incandescent",
+        "payload": "on",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 950,
+        "y": 1200,
+        "wires": [
+            [
+                "170e583d2a7817f2"
+            ]
+        ]
+    },
+    {
+        "id": "5691c40d5c6e501c",
+        "type": "change",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "enabled",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 690,
+        "y": 1200,
+        "wires": [
+            [
+                "421f78a3e4b92c74"
+            ]
+        ]
+    },
+    {
+        "id": "7d9cc983d932f722",
+        "type": "ui_template",
+        "z": "2a2bc2518870a3bd",
+        "group": "327ea395dddff33e",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "format": "\n    <div class=\"status alarm\">\n<table  class=\"table_status\">\n  <tr><td><strong>Status: </strong></td>\n  <td><i class=\"material-icons\">{{msg.alarm}}</i>\n</td>\n</tr>\n  </table>\n\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 620,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "5ec3cdb1a41f5245",
+        "type": "function",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "func": "var payload=msg.payload;\nif (payload == \"false\")\nmsg.alarm=\"mi-power_off\";\nelse\nmsg.alarm=\"mi-power\";\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 40,
+        "wires": [
+            [
+                "7d9cc983d932f722"
+            ]
+        ]
+    },
+    {
+        "id": "bfeb9952f39729e1",
+        "type": "ui_gauge",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "group": "6e486e6a6c4260fd",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "pH_value",
+        "label": "",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "14",
+        "colors": [
+            "#bf6440",
+            "#5ce600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 520,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "b840b270be196643",
+        "type": "mqtt in",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "topic": "hydroponics/sensors/ph",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 240,
+        "wires": [
+            [
+                "bfeb9952f39729e1"
+            ]
+        ]
+    },
+    {
+        "id": "226f2d1c36c71e8e",
+        "type": "mqtt in",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "topic": "hydroponics/sensors/tds",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 170,
+        "y": 480,
+        "wires": [
+            [
+                "86fe3a91a663cd7c"
+            ]
+        ]
+    },
+    {
+        "id": "86fe3a91a663cd7c",
+        "type": "ui_gauge",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "group": "dd6d366f17df5523",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "TDS_value",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "2000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 510,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "226ad36b7a5790f9",
+        "type": "ui_template",
+        "z": "2a2bc2518870a3bd",
+        "group": "ef6125c7a764a82a",
+        "name": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "    <div class=\"status2\">\n<table  class=\"table_status2\">\n  <tr><td><strong> Status:    </strong></td><td class=\"circle\"><svg height=\"50\" width=\"50\">\n<circle cx=\"15\" cy=\"15\" r=\"15\"  style=\"stroke: none; fill: {{msg.payload ? 'green':'red' }}\"/>\n</svg></td>\n</tr>\n  </table>\n\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 500,
+        "y": 760,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ccdea7c964b9399f",
+        "type": "mqtt in",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "topic": "hydroponics/sensors/temperature",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 680,
+        "wires": [
+            [
+                "6616e703a305b25c"
+            ]
+        ]
+    },
+    {
+        "id": "ae608a47d09ea847",
+        "type": "ui_template",
+        "z": "2a2bc2518870a3bd",
+        "group": "b2afc89d1ffbd198",
+        "name": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "    <div class=\"status2\">\n<table  class=\"table_status2\">\n  <tr><td><strong> Status:    </strong></td><td class=\"circle\"><svg height=\"50\" width=\"50\">\n<circle cx=\"15\" cy=\"15\" r=\"15\"  style=\"stroke: none; fill: {{msg.payload ? 'green':'red' }}\"/>\n</svg></td>\n</tr>\n  </table>\n\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 580,
+        "y": 940,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d4be6318642ced51",
+        "type": "mqtt in",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "topic": "hydroponics/sensors/humidity",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 180,
+        "y": 900,
+        "wires": [
+            [
+                "b403db6d9530ac7c"
+            ]
+        ]
+    },
+    {
+        "id": "173e8d6af6f08094",
+        "type": "ui_template",
+        "z": "2a2bc2518870a3bd",
+        "group": "4a80aa3e213bbd61",
+        "name": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "    <div class=\"status2\">\n<table  class=\"table_status2\">\n  <tr><td><strong> Status:    </strong></td><td class=\"circle\"><svg height=\"50\" width=\"50\">\n<circle cx=\"15\" cy=\"15\" r=\"15\"  style=\"stroke: none; fill: {{msg.payload ? 'green':'red' }}\"/>\n</svg></td>\n</tr>\n  </table>\n\n</div>\n",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 500,
+        "y": 1140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "923c63b108bd223e",
+        "type": "mqtt in",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "topic": "hydroponics/sensors/light",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 190,
+        "y": 1080,
+        "wires": [
+            [
+                "79133bf406d2e7c0"
+            ]
+        ]
+    },
+    {
+        "id": "79133bf406d2e7c0",
+        "type": "ui_gauge",
+        "z": "2a2bc2518870a3bd",
+        "name": "",
+        "group": "4a80aa3e213bbd61",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "Luminosite_value",
+        "label": "LUX",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "10000",
+        "colors": [
+            "#87834a",
+            "#a7a739",
+            "#cdf505"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 570,
+        "y": 1080,
+        "wires": []
+    },
+    {
+        "id": "6616e703a305b25c",
+        "type": "ui_widget_thermometer",
+        "z": "2a2bc2518870a3bd",
+        "group": "ef6125c7a764a82a",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Temperature_value",
+        "title": "Temperature_value",
+        "numColor": 3,
+        "colorTop": "#2196f3",
+        "colorMiddle": "#8bc34a",
+        "colorBottom": "#f44336",
+        "unit": "°C",
+        "scale": "normal",
+        "minTemp": "-40",
+        "maxTemp": "80",
+        "minTempMoreThanMaxTemp": "1",
+        "numberOfDecimals": "0",
+        "showPercentage": "0",
+        "currentTempFontSize": "1.2",
+        "x": 510,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "b403db6d9530ac7c",
+        "type": "ui_widget_humidity_tree",
+        "z": "2a2bc2518870a3bd",
+        "group": "b2afc89d1ffbd198",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Humidite_value",
+        "title": "Humidite_value",
+        "colorHumidMax": "#006000",
+        "colorHumidMin": "#945818",
+        "x": 540,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "598019e50263e367",
+        "type": "mqtt in",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "topic": "hydroponics/config/temp_min",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 120,
+        "wires": [
+            [
+                "c67142baf3ece0c4"
+            ]
+        ]
+    },
+    {
+        "id": "c67142baf3ece0c4",
+        "type": "ui_text",
+        "z": "197e391cbbea50c9",
+        "group": "c5ab41c4da9df60d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Température minimale :",
+        "format": "{{msg.payload + \" °C\"}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 530,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "5cd4842e3baee9c9",
+        "type": "mqtt in",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "topic": "hydroponics/config/temp_max",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 800,
+        "y": 120,
+        "wires": [
+            [
+                "6ca3ddf51884c57a"
+            ]
+        ]
+    },
+    {
+        "id": "6ca3ddf51884c57a",
+        "type": "ui_text",
+        "z": "197e391cbbea50c9",
+        "group": "c5ab41c4da9df60d",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Température maximale :",
+        "format": "{{msg.payload + \" °C\"}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1130,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "6a451f37e10bc4d8",
+        "type": "mqtt out",
+        "z": "197e391cbbea50c9",
+        "name": "Temp_min",
+        "topic": "hydroponics/control/setTempMin",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e64a93143a5efb4",
+        "x": 450,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "e4e76234a8ca2db9",
+        "type": "mqtt out",
+        "z": "197e391cbbea50c9",
+        "name": "Temp_max",
+        "topic": "hydroponics/control/setTempMax",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e64a93143a5efb4",
+        "x": 930,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "7529612f7a2b29a4",
+        "type": "ui_slider",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "label": "New_temp_min :",
+        "tooltip": "",
+        "group": "c5ab41c4da9df60d",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-40",
+        "max": "80",
+        "step": 1,
+        "className": "",
+        "x": 270,
+        "y": 240,
+        "wires": [
+            [
+                "6a451f37e10bc4d8"
+            ]
+        ]
+    },
+    {
+        "id": "103d0a310f82dafe",
+        "type": "ui_slider",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "label": "New_temp_max :",
+        "tooltip": "",
+        "group": "c5ab41c4da9df60d",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-40",
+        "max": "80",
+        "step": 1,
+        "className": "",
+        "x": 750,
+        "y": 240,
+        "wires": [
+            [
+                "e4e76234a8ca2db9"
+            ]
+        ]
+    },
+    {
+        "id": "732887c5114520a4",
+        "type": "mqtt in",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "topic": "hydroponics/config/ph_min",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 420,
+        "wires": [
+            [
+                "2897fc3b18e5f561"
+            ]
+        ]
+    },
+    {
+        "id": "2897fc3b18e5f561",
+        "type": "ui_text",
+        "z": "197e391cbbea50c9",
+        "group": "c0bd9a86d72846a7",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "pH minimale :",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 480,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "08edd2aff6d2d32d",
+        "type": "mqtt in",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "topic": "hydroponics/config/ph_max",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 770,
+        "y": 420,
+        "wires": [
+            [
+                "6ea830ae9340c4c1"
+            ]
+        ]
+    },
+    {
+        "id": "6ea830ae9340c4c1",
+        "type": "ui_text",
+        "z": "197e391cbbea50c9",
+        "group": "c0bd9a86d72846a7",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "pH maximale :",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1060,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "90489fbe1d8b974d",
+        "type": "mqtt out",
+        "z": "197e391cbbea50c9",
+        "name": "pH_min",
+        "topic": "hydroponics/control/setPHMin",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e64a93143a5efb4",
+        "x": 420,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "5aab9c6d52596aac",
+        "type": "mqtt out",
+        "z": "197e391cbbea50c9",
+        "name": "pH_max",
+        "topic": "hydroponics/control/setPHMax",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e64a93143a5efb4",
+        "x": 900,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "85db7735797bd460",
+        "type": "ui_slider",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "label": "New_ph_min :",
+        "tooltip": "",
+        "group": "c0bd9a86d72846a7",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "14",
+        "step": 1,
+        "className": "",
+        "x": 240,
+        "y": 540,
+        "wires": [
+            [
+                "90489fbe1d8b974d"
+            ]
+        ]
+    },
+    {
+        "id": "8c10546791d11b57",
+        "type": "ui_slider",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "label": "New_ph_max :",
+        "tooltip": "",
+        "group": "c0bd9a86d72846a7",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "14",
+        "step": 1,
+        "className": "",
+        "x": 720,
+        "y": 540,
+        "wires": [
+            [
+                "5aab9c6d52596aac"
+            ]
+        ]
+    },
+    {
+        "id": "1ed1769fbc9e587e",
+        "type": "mqtt in",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "topic": "hydroponics/config/tds_min",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 210,
+        "y": 720,
+        "wires": [
+            [
+                "5f49f2fae6512be9"
+            ]
+        ]
+    },
+    {
+        "id": "5f49f2fae6512be9",
+        "type": "ui_text",
+        "z": "197e391cbbea50c9",
+        "group": "ed9a1db91a50bf87",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "TDS minimale :",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 480,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "3eba9b4dfd2ab549",
+        "type": "mqtt in",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "topic": "hydroponics/config/tds_max",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 780,
+        "y": 720,
+        "wires": [
+            [
+                "ab275a190dba202d"
+            ]
+        ]
+    },
+    {
+        "id": "ab275a190dba202d",
+        "type": "ui_text",
+        "z": "197e391cbbea50c9",
+        "group": "ed9a1db91a50bf87",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "TDS maximale :",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1060,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "1e92cc7a5ebcd737",
+        "type": "mqtt out",
+        "z": "197e391cbbea50c9",
+        "name": "TDS_min",
+        "topic": "hydroponics/control/setTDSMin",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e64a93143a5efb4",
+        "x": 420,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "a8691a207282e97a",
+        "type": "mqtt out",
+        "z": "197e391cbbea50c9",
+        "name": "TDS_max",
+        "topic": "hydroponics/control/setTDSMax",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e64a93143a5efb4",
+        "x": 900,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "c9669d55e9382551",
+        "type": "ui_slider",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "label": "New_tds_min :",
+        "tooltip": "",
+        "group": "ed9a1db91a50bf87",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "2000",
+        "step": 1,
+        "className": "",
+        "x": 240,
+        "y": 840,
+        "wires": [
+            [
+                "1e92cc7a5ebcd737"
+            ]
+        ]
+    },
+    {
+        "id": "642e79b43d3f5f15",
+        "type": "ui_slider",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "label": "New_tds_max :",
+        "tooltip": "",
+        "group": "ed9a1db91a50bf87",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "2000",
+        "step": 1,
+        "className": "",
+        "x": 720,
+        "y": 840,
+        "wires": [
+            [
+                "a8691a207282e97a"
+            ]
+        ]
+    },
+    {
+        "id": "e4939ff2590e922b",
+        "type": "mqtt in",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "topic": "hydroponics/config/hum_min",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 220,
+        "y": 1020,
+        "wires": [
+            [
+                "4c708aae7d743f35"
+            ]
+        ]
+    },
+    {
+        "id": "4c708aae7d743f35",
+        "type": "ui_text",
+        "z": "197e391cbbea50c9",
+        "group": "8630dd6e35be1d38",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Humidite minimale :",
+        "format": "{{msg.payload + \" % \"}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 490,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "07e82320b0cac2c3",
+        "type": "mqtt in",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "topic": "hydroponics/config/hum_max",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 780,
+        "y": 1020,
+        "wires": [
+            [
+                "bdf5fa4aeaff2fa5"
+            ]
+        ]
+    },
+    {
+        "id": "bdf5fa4aeaff2fa5",
+        "type": "ui_text",
+        "z": "197e391cbbea50c9",
+        "group": "8630dd6e35be1d38",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Humidite maximale :",
+        "format": "{{msg.payload + \" % \"}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1080,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "75dd93c63f609549",
+        "type": "mqtt out",
+        "z": "197e391cbbea50c9",
+        "name": "Hum_min",
+        "topic": "hydroponics/control/setHumidityMin",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e64a93143a5efb4",
+        "x": 420,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "18b6740e8ca3b067",
+        "type": "mqtt out",
+        "z": "197e391cbbea50c9",
+        "name": "Hum_max",
+        "topic": "hydroponics/control/setHumidityMax",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e64a93143a5efb4",
+        "x": 910,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "4ab93fa65c8d68df",
+        "type": "ui_slider",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "label": "New_hum_min :",
+        "tooltip": "",
+        "group": "8630dd6e35be1d38",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 240,
+        "y": 1140,
+        "wires": [
+            [
+                "75dd93c63f609549"
+            ]
+        ]
+    },
+    {
+        "id": "21b401698f4caf24",
+        "type": "ui_slider",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "label": "New_hum_max :",
+        "tooltip": "",
+        "group": "8630dd6e35be1d38",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "100",
+        "step": 1,
+        "className": "",
+        "x": 730,
+        "y": 1140,
+        "wires": [
+            [
+                "18b6740e8ca3b067"
+            ]
+        ]
+    },
+    {
+        "id": "e3348c881f0234c8",
+        "type": "mqtt in",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "topic": "hydroponics/config/light_min",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 1320,
+        "wires": [
+            [
+                "5e42784c5e521cc6"
+            ]
+        ]
+    },
+    {
+        "id": "5e42784c5e521cc6",
+        "type": "ui_text",
+        "z": "197e391cbbea50c9",
+        "group": "5a083607fa984f2f",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Luminosite minimale :",
+        "format": "{{msg.payload + \"Lux\"}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 520,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "a061bda5c93ff6a3",
+        "type": "mqtt in",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "topic": "hydroponics/config/light_max",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "3e64a93143a5efb4",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 800,
+        "y": 1320,
+        "wires": [
+            [
+                "875df185c120525c"
+            ]
+        ]
+    },
+    {
+        "id": "875df185c120525c",
+        "type": "ui_text",
+        "z": "197e391cbbea50c9",
+        "group": "5a083607fa984f2f",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Luminosite maximale :",
+        "format": "{{msg.payload + \"Lux\"}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": false,
+        "font": "",
+        "fontSize": 16,
+        "color": "#000000",
+        "x": 1100,
+        "y": 1320,
+        "wires": []
+    },
+    {
+        "id": "502c4ff5fbeb022b",
+        "type": "mqtt out",
+        "z": "197e391cbbea50c9",
+        "name": "Light_min",
+        "topic": "hydroponics/control/setLightMin",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e64a93143a5efb4",
+        "x": 440,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "5a41495257870d21",
+        "type": "mqtt out",
+        "z": "197e391cbbea50c9",
+        "name": "Light_max",
+        "topic": "hydroponics/control/setLightMax",
+        "qos": "2",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "3e64a93143a5efb4",
+        "x": 930,
+        "y": 1440,
+        "wires": []
+    },
+    {
+        "id": "d26905a8392cbc11",
+        "type": "ui_slider",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "label": "New_light_min :",
+        "tooltip": "",
+        "group": "5a083607fa984f2f",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "10000",
+        "step": 1,
+        "className": "",
+        "x": 260,
+        "y": 1440,
+        "wires": [
+            [
+                "502c4ff5fbeb022b"
+            ]
+        ]
+    },
+    {
+        "id": "29f7dca697e485b8",
+        "type": "ui_slider",
+        "z": "197e391cbbea50c9",
+        "name": "",
+        "label": "New_light_max :",
+        "tooltip": "",
+        "group": "5a083607fa984f2f",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "10000",
+        "step": 1,
+        "className": "",
+        "x": 740,
+        "y": 1440,
+        "wires": [
+            [
+                "5a41495257870d21"
+            ]
+        ]
+    },
+    {
+        "id": "586a5df994102f5f",
+        "type": "inject",
+        "z": "6be7ece3022d6815",
+        "name": "",
+        "props": [],
+        "repeat": "240",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "0.300",
+        "topic": "",
+        "x": 100,
+        "y": 80,
+        "wires": [
+            [
+                "0b30b88a71fe2278"
+            ]
+        ]
+    },
+    {
+        "id": "5b4a2e33faa6e4cb",
+        "type": "inject",
+        "z": "6be7ece3022d6815",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "0.600",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "b7c3c824bddd6f34"
+            ]
+        ]
+    },
+    {
+        "id": "8933969b13a6101a",
+        "type": "debug",
+        "z": "6be7ece3022d6815",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "2b21b5e6c7f839b6",
+        "type": "debug",
+        "z": "6be7ece3022d6815",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "0b30b88a71fe2278",
+        "type": "pythonshell in",
+        "z": "6be7ece3022d6815",
+        "name": "pest_inference",
+        "pyfile": "/home/hydrosystem/myenv/nuisible_inference.py",
+        "virtualenv": "/home/hydrosystem/myenv",
+        "continuous": true,
+        "stdInData": true,
+        "x": 360,
+        "y": 80,
+        "wires": [
+            [
+                "8933969b13a6101a"
+            ]
+        ]
+    },
+    {
+        "id": "b7c3c824bddd6f34",
+        "type": "pythonshell in",
+        "z": "6be7ece3022d6815",
+        "name": "plant_inference",
+        "pyfile": "/home/hydrosystem/myenv/plant_inference.py",
+        "virtualenv": "/home/hydrosystem/myenv",
+        "continuous": true,
+        "stdInData": true,
+        "x": 360,
+        "y": 180,
+        "wires": [
+            [
+                "2b21b5e6c7f839b6"
+            ]
+        ]
+    }
+]
