@@ -4,7 +4,7 @@ Prototype académique qui combine IoT, supervision et Computer Vision embarquée
 
 > **Prototype académique** — il n'a pas été conçu comme un système prêt pour la production.
 
-![Vue d'ensemble du prototype : ESP32, capteurs, relais, ventilateur, pompe et Raspberry Pi](docs/demo/prototype_vue_ensemble.jpg)
+<img src="docs/demo/prototype_vue_ensemble.jpg" width="420" alt="Vue d'ensemble du prototype : ESP32, capteurs, relais, ventilateur, pompe et Raspberry Pi">
 
 ## En bref
 
