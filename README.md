@@ -1,6 +1,6 @@
 # Système AIoT de supervision d'une culture hydroponique
 
-Prototype académique qui combine IoT, supervision et Computer Vision embarquée, développé dans le cadre de mon mémoire de Master IA & Smart Technologies (2024–2025).
+Prototype académique combinant IoT, supervision et Computer Vision embarquée, développé dans le cadre de mon mémoire de Master IA & Smart Technologies, soutenu en février 2025.
 
 > **Prototype académique** — il n'a pas été conçu comme un système prêt pour la production.
 
@@ -8,7 +8,7 @@ Prototype académique qui combine IoT, supervision et Computer Vision embarquée
 
 ## En bref
 
-- **Projet individuel** — mémoire de Master IA & Smart Technologies, 2024–2025
+- **Projet individuel** — mémoire de Master IA & Smart Technologies, soutenu en février 2025
 - **Architecture** — ESP32 · MQTT · Node-RED · Raspberry Pi
 - **Computer Vision** — YOLOv9t, mAP50 **0,865 sur validation**
 - **Edge inference** — environ **1 s/image** observé sur le Raspberry Pi du prototype
@@ -17,7 +17,7 @@ Prototype académique qui combine IoT, supervision et Computer Vision embarquée
 
 ## 1. Présentation
 
-Ce prototype surveille une petite culture hydroponique de laitue. Un **ESP32** lit les conditions du milieu (température, humidité, pH, TDS, luminosité, niveau d'eau), les valide puis les publie en **MQTT**. Il pilote aussi un ventilateur, une pompe et des voyants à partir de règles simples. Sur un **Raspberry Pi**, **Node-RED** reçoit ces mesures, les enregistre dans **InfluxDB** et les affiche sur un tableau de bord. Node-RED lance aussi, à intervalles réguliers, une **détection visuelle de ravageurs et de maladies** (YOLO exporté en TFLite) à partir de la caméra du Pi.
+Ce prototype a été conçu pour superviser une petite culture hydroponique de laitue. Un **ESP32** lit les conditions du milieu (température, humidité, pH, TDS, luminosité, niveau d'eau), les valide puis les publie en **MQTT**. Il pilote aussi un ventilateur, une pompe et des voyants à partir de règles simples. Sur un **Raspberry Pi**, **Node-RED** reçoit ces mesures, les enregistre dans **InfluxDB** et les affiche sur un tableau de bord. Node-RED lance aussi, à intervalles réguliers, une **détection visuelle de ravageurs et de maladies** (YOLO exporté en TFLite) à partir de la caméra du Pi.
 
 ### English summary
 
@@ -78,7 +78,7 @@ flowchart LR
 
 Dans `flows.json`, deux nœuds *inject* lancent les scripts de vision toutes les **4 minutes** (ravageurs) et **5 minutes** (maladies). Un e-mail n'est envoyé que si au moins un objet est détecté. Tous les services serveur (Mosquitto, Node-RED, InfluxDB, CouchDB) tournent sur le **même Raspberry Pi**, sur le réseau local.
 
-> Le mémoire contient des schémas plus anciens. Ils décrivent un « module de décision » qui n'a pas été implémenté sous cette forme. Le schéma ci-dessus a donc été redessiné à partir du code réellement retrouvé.
+> La logique de décision décrite dans l'architecture fonctionnelle du mémoire a été simplifiée dans l'implémentation finale en règles déterministes exécutées sur l'ESP32 : seuils pour certains actionneurs et voyants, temporisation pour la pompe. Le schéma ci-dessus a été redessiné à partir du code et des artefacts effectivement retrouvés.
 
 ---
 
@@ -102,6 +102,16 @@ Le schéma Fritzing prévoit un second servomoteur, destiné au capteur TDS, mai
 
 ![Schéma de câblage Fritzing (vue breadboard)](hardware/montage_breadboard.png)
 *Vue breadboard exportée depuis le fichier Fritzing du dépôt ([`hardware/`](hardware/), version vectorielle : [`montage_breadboard.svg`](hardware/montage_breadboard.svg)).*
+
+### Structure hydroponique
+
+En parallèle du prototype électronique, j'ai conçu et réalisé un module physique de culture hydroponique basé sur la technique NFT (*Nutrient Film Technique*). La solution a été pensée comme une structure verticale et modulaire, avec des canaux inclinés pour permettre la circulation de la solution nutritive et faciliter la maintenance.
+
+<img src="docs/demo/structure_hydroponique.jpg" width="380" alt="Module NFT construit : cadre en tubes PVC et canaux gris perforés pour les pots, photographié sans plants ni électronique">
+
+*Prototype physique d'un module de la structure hydroponique NFT conçue dans le cadre du mémoire.*
+
+> **Intégration non finalisée** — Le module NFT et le prototype AIoT ont été réalisés comme deux sous-ensembles du même projet et conçus pour être intégrés. Faute de temps, et compte tenu des difficultés d'acquisition de certains composants et des contraintes techniques rencontrées, leur intégration complète n'a pas été testée en conditions réelles de culture avant la soutenance.
 
 ---
 
@@ -212,6 +222,7 @@ Les journaux Node-RED du prototype indiquent environ **1 s d'inférence par imag
 ## 12. Limites connues
 
 - **Prototype académique**, testé sur un réseau local. Il n'est pas prévu pour la production.
+- **Intégration physique incomplète** : la structure NFT et le prototype AIoT ont été réalisés séparément, mais leur fonctionnement conjoint sur une culture réelle de laitue n'a pas été validé avant la soutenance.
 - **Broker MQTT accessible sans authentification** sur le réseau local (`allow_anonymous true`).
 - **Secrets écrits en dur** dans certains scripts du prototype d'origine. Ils ont été retirés de cette version publique (voir la section suivante).
 - **pH indicatif** : la calibration a été faite sans solution tampon.
@@ -302,7 +313,19 @@ Travaux futurs, **non réalisés à ce jour** :
 
 ---
 
-## 18. Auteur
+## 18. Mémoire associé
+
+Ce projet a été développé pour mon mémoire de Master IA & Smart Technologies, soutenu le 28 février 2025 à l'Université Iba Der Thiam de Thiès, dans le cadre du double diplôme avec l'Université de Technologie de Troyes.
+
+**Sujet :**
+
+*Étude et mise en place d’un système autonome de gestion de culture hors-sol pour la laitue, intégrant une architecture de contrôle basée sur l’Internet des objets (IoT) et l’intelligence artificielle (IA).*
+
+Le mémoire retrace la démarche de recherche, la conception et les choix d'architecture du projet. Ce dépôt documente plus précisément l'état effectivement implémenté et retrouvé dans les artefacts techniques ; certaines briques décrites dans l'architecture cible ont donc été simplifiées dans le prototype final.
+
+---
+
+## 19. Auteur
 
 **Seth Houansou**
 Diplômé d'un Master IA & Smart Technologies — actuellement en Mastère Expert Informatique & Systèmes d'Information à l'EPSI Lille.
