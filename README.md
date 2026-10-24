@@ -168,7 +168,7 @@ Les images provenaient de plusieurs sources externes, notamment Roboflow, Kaggle
 
 ## 9. L'impact de la qualité des données
 
-Une quinzaine d'entraînements sur les annotations d'origine (YOLOv8n, YOLOv9t et YOLOv10n, 640 et 1024 px, plusieurs optimiseurs) ont produit des mAP50 de validation comprises entre 0,68 et 0,82, la plupart entre 0,75 et 0,81.
+Dix-sept entraînements sur les annotations d'origine (YOLOv8n, YOLOv9t et YOLOv10n, 640 et 1024 px, plusieurs optimiseurs) ont produit des mAP50 de validation comprises entre 0,684 et 0,824, dont 11 entre 0,75 et 0,81.
 
 J'ai alors repris les annotations avec LabelImg. Sur les **mêmes 170 images de validation**, le nombre d'instances annotées est passé de **356 à 583**, soit environ **+64 %**. Le modèle réentraîné atteint une mAP50 de **0,865**.
 
@@ -271,7 +271,7 @@ hydroponic-aiot/
 
 ### Non fourni
 
-- **Jeux de données d'entraînement** et images annotées : leur licence ne permet pas de les redistribuer.
+- **Jeux de données d'entraînement** et images annotées : non redistribués dans ce dépôt, faute de droits de redistribution suffisamment clairs pour une publication publique.
 - **Poids des modèles** (`.tflite`) : leurs droits ne sont pas clarifiés. Sans modèle, les scripts de vision ne s'exécutent pas.
 - **Notebooks d'entraînement** : ils ne font pas partie de cette version publique.
 - **Configuration locale et secrets** (Wi-Fi, identifiants, tokens).
